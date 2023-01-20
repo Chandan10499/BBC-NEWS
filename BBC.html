@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBC News</title>
+    <style type="text/css">
+        #topbar {
+
+            width:1000px;
+            margin:0 auto;
+            height: 40px;
+            position: relative;
+
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #logo{
+            width: 10%;
+            margin-top: 8px;
+            float:left;
+            margin: 15px;
+        }
+        .topbar-section{
+            float:left;
+            border-left: 1px #250f0f solid;
+            height: 150%;
+            
+        }
+        
+        #signin-logo {
+            margin: 5px 10px;
+            width: 40px;
+            float:left;
+        }
+        #signin-text{
+            font-weight: bold;
+            font-size: 90%;
+            position: relative;
+            top:14px;
+            margin-right: 20px;
+            
+        }
+        #bell{
+            width: 20px;
+            
+            float:left;
+            margin: 15px 30px;
+            /* margin: 9px 8px 0 8px; */
+        }
+        .bel-div{
+            float: left;
+            
+        }
+        .topbar-menu{
+            font-size: 90%;
+            font-weight: bold;
+            padding: 13px 15px 0 15px;
+            height: 45px;
+        }
+        #more{
+            width: 10px;
+            margin-left: 5px;
+        }
+        #search-box{
+            background-color: rgb(247, 237, 237);
+            border:none ;
+            font-weight: bold;
+            font-size:10px;
+            padding: 5px;
+            margin: 15px 0 5px 5px;
+            float:left;
+        }
+        #magnifying{
+            width: 10px;
+            background: rgb(247, 237, 237);
+            margin: 19px 0 0px 0px;
+            /* float:right; */
+        }
+        .clear{
+            clear:both;
+        }
+        #menu-bar-container{
+            background: #D71717;
+            /* width: 1161px; */
+            width: 100%;
+            height: 90px;
+        }
+        #menu-bar{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        h1{
+            padding: 0;
+            margin: 0;
+            color: white;
+            font-size: 50px;
+            font-weight: normal;
+            padding-top: 15px;
+            float:left;
+        }
+        #local-news{
+            border: 1px #beb3b3 solid;
+            float:right;
+            width: 180px;
+            padding: 5px 5px 0 10px;
+            margin: 19px 8px 0 0;
+        }
+        #local-news a{
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            position: relative;
+            top: -5px;
+            
+        }
+        #local-news a:hover{
+            text-decoration: underline;
+        }
+        #location{
+            width: 25px;
+            margin-top: 10px;
+            
+        }
+        #co{
+            color: white;
+        }
+        #manu-bar-2-container{
+            background-color: #A91717;
+            width: 100%;
+        }
+        #menu-bar-2{
+            width: 1000px;
+            height: 30px;
+            margin: 0 auto;
+
+
+        }
+        #menu-bar-2 a{
+            color: white;
+            text-decoration: none;
+            top: 6px;
+            padding: 0 10px;
+            border-right: 1px solid #beb3b3;
+            font-size: 14px;
+            position: relative;
+
+        }
+        #menu-bar-2 a:hover{
+            text-decoration: underline;
+        }
+        .no-border{
+            border: none ! important;
+            
+        }
+        #arrow {
+            height: 10px;
+            position: relative;
+            top: 7px;
+
+        }
+        #containt{
+            width: 100%;
+            
+            color: #535353;
+            /* padding-top: auto; */
+            margin: 30px 0 0 190px;
+            /* background-color: rgb(54, 17, 17); */
+        }
+        .date{
+            font-weight: bold;
+        }
+        #news1{
+            color: #1f4f82;
+            font-size: 2.5em;
+        }
+        #headlineimg{
+            width: 300px;
+            height: 170px;
+            float: left;
+
+        }
+        .newsitem{
+            position: relative;
+            width: 300px;
+            left: 10px;
+            font-size: 1em;
+            float: left;
+            top:-19px;
+        }
+        .newsitem a{
+            color: #1f4f82;
+            text-decoration: none;
+        }
+        .newsitem a:hover{
+            text-decoration: underline;
+        }
+        .video{
+            background-image: url(img/vid.png);
+            background-position: left center ;
+            background-repeat: no-repeat;
+            padding-left: 18px;
+            font-size: 1em;
+
+        }
+        .link{
+            line-height: 1.6em;
+            
+        }
+        #watchlisten{
+            background-color: #EEEEEE;
+            /* float: right; */
+            width: 370px;
+            height: 300px;
+            position: relative;
+            margin: -100px 0 0 600px;
+
+        }
+        h3{
+            color: #505050;
+            font-size: 2em;
+            margin: 10px 0 15px 10px;
+        }
+        a{
+            text-decoration: none;
+
+        }
+        .pic{
+            width: 157px;
+        }
+        .leftarrow{
+            float: left;
+            height: 163px;
+            width: 25px;
+            margin-left: 2px;
+            margin-top: -50px;
+        }
+        .wlblock{
+            float: left;
+            background-color: red;
+            width: 157px;
+            border-right: 1px solid white;
+            margin-top: -50px;
+
+        }
+        .wlblock a{
+            color: white;
+        }
+        .wlblock p{
+            margin: 9px 10px 8px 10px;
+        }
+        .rightarrow{
+            /* float: left; */
+            height: 163px;
+            width: 25px;
+            margin-right: 2px;
+            margin-top: -3px;
+        }
+        #watchlisten ul{
+            /* margin-top: -2px; */
+            margin: 0;
+            padding: 0 10px 10px 10px;
+
+        }
+        #watchlisten li{
+            list-style: none;
+            background-image: url("img/vid.png");
+            background-position: left center;
+            padding: 3px 0 5px 20px;
+            background-repeat: no-repeat;
+        }
+        #watchlisten li:hover{
+           
+            text-decoration: underline;
+        }
+        .bb{
+            border-bottom:1px solid #DDDDDD;
+        }
+
+
+    </style>
+</head>
+<body>
+   
+    <div id="topbar">
+
+<img id="logo" src="bbc logo.png">
+
+<div id="signin-div" class="topbar-section">
+<img id="signin-logo" src="img/sign in1.jpg" alt="signin">
+<span id="signin-text" >Sign in</span>
+</div>
+
+<div id="bel-div" class="topbar-section">
+    <img id="bell" src="img/notification.jpg" alt="signin">
+    <!-- <span id="signin-text" >Notification</span> -->
+    </div>
+
+<div class="topbar-section topbar-menu">News</div>
+
+<div class="topbar-section topbar-menu">Sports</div>
+
+<div class="topbar-section topbar-menu">Weather</div>
+
+<div class="topbar-section topbar-menu">iPlayer</div>
+
+<div class="topbar-section topbar-menu">TV</div>
+
+<div class="topbar-section topbar-menu">More
+    <img id="more" src="img/down.png" alt="more">
+</div>
+
+<div class="topbar-section">
+    <input id="search-box" type="text" vlaue="Search">
+    <input type="image" id="magnifying" src="img/search.webp" alt="Search">
+</div>
+    </div>
+
+    <div class="clear">    
+    <div id="menu-bar-container">
+    <div id="menu-bar">
+        <h1>NEWS</h1>
+    <div id="local-news">
+       <a href=""> Find local news</a>
+        <img id="location" src="img/location1.png" alt="lication">
+        
+    </div>
+    </div>
+    <div class="clear"></div>
+    <div id="manu-bar-2-container">
+    <div id="menu-bar-2">
+        <a href="">HOME</a>
+        <a href="">UK</a>
+        <a href="">World</a>
+        <a href="">Politics</a>
+        <a href="">Tech</a>
+        <a href="">Science</a>
+        <a href="">Health</a>
+        <a href="">Education</a>
+        <a href="">Entertainment & Arts</a>
+        <a href="">Video & Audio</a>
+        <a class="no-border" href="">More</a>
+        <img id="arrow" src="img/down1.png" alt="">
+
+
+
+    </div>
+
+    </div>
+
+    </div>
+    <div id="break"></div>
+    <div id="containt">
+        <div id="fixedwidth">
+        <p><sapn class="date">9 jan 2023 </sapn>Last Update at 09:55</p>
+        <h2 href="" id="news1">Pollution to spread in world</h2>
+        <img id="headlineimg"src="img/headline.jpg" alt="img">
+        <div class="newsitem">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Aperiam exercitationem, quam ipsa eligendi quasi accusantium?                  
+            </p>
+            
+            <p class="link">
+            <a class="video" href="">Why pollusion spread</a><br/>
+            <a class="video" href="">Why pollusion spread</a><br/>
+            
+            <a href="">What willm Pollution</a><br />
+            <a class="video"href="">Why pollusion spread</a>
+            </p>
+        </div>
+        <div id="watchlisten">
+            <h3>Watch/Listen</h3>
+            <img class="leftarrow" src="img/leftarrow.png" alt="">
+            <div class="wlblock">
+                <img class="pic" src="img/pic1.jpg" alt="IMG">
+                <p><a href="">Lorem ipsum dolor sit.</a></p>
+            </div>
+            <div class="wlblock">
+                <img class="pic" src="img/pic1.jpg" alt="IMG">
+                <p><a href="">Lorem ipsum dolor sit.</a></p>
+            </div>
+            <img class="rightarrow" src="img/rightarrow.png" alt="">
+            <ul>
+                
+                <li class="bb"><a href="">BBC3 News Chanel</a></li>
+                <li class="bb"><a href="">BBC News Chanel</a></li>
+                <li><a href="">BBC2 News Chanel</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    </div>
+    </div>
+    
+
+</body>
+</html>
